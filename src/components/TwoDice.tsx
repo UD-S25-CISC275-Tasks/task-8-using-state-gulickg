@@ -12,14 +12,10 @@ export function d6(): number {
 }
 
 export function TwoDice(): React.JSX.Element {
-    const [right, setRight] = useState<number>(d6());
-    const [left, setLeft] = useState<number>(d6());
+    const [right, setRight] = useState<number>(0);
+    const [left, setLeft] = useState<number>(2);
     //const [visible, setVisible] = useState<boolean>(false);
     let message = "";
-    while (right === left) {
-        setRight(d6());
-        setLeft(d6());
-    }
     function rollLeft() {
         setLeft(d6);
     }
